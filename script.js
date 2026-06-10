@@ -43,8 +43,8 @@ let score = 0;
 
 
 
-let hightScore = localStorage.getItem("highScore");
-hoghScore = highScore ? Number(highScore) : 0;
+let highScore = localStorage.getItem("highScore");
+highScore = highScore ? Number(highScore) : 0;
 
 
 
@@ -54,7 +54,7 @@ let isDucking = false;
 window.onload = function () {
     board = document.getElementById("board");
     board.width = boardWidth;
-    board.Height = boardHeight;
+    board.height = boardHeight;
 
     context = board.getContext("2d");
 
@@ -146,7 +146,7 @@ function moveDino(e) {
 
 function stopDuck(e) {
     if (e.code == "ArrowDown") {
-        osDucking = false;
+        isDucking = false;
     }
 }
 
@@ -183,7 +183,7 @@ function placeCactus() {
     cactusArray.push(cactus);
 
     if (cactusArray.length > 5) {
-        cacatusArray.shift();
+        cactusArray.shift();
     }
 }
 
